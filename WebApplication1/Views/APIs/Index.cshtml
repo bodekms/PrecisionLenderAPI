@@ -52,7 +52,9 @@
             $loading.removeClass("hidden");
             $(item).addClass("hidden");
             $.getJSON(item.href, function (d) {
-                console.log(d.Result);
+                if (console) {
+                    console.log(d.Result);
+                }
                $loading.addClass("hidden");
                 $(item).removeClass("hidden");
             });
